@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration debug="true">
+
+    <!--选择往控制台打印-->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are  by default assigned the type(编码器在默认情况下被指定为该类型)
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
+        <!--打印的方式-->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%boldBlue(%thread)] %-5level %boldGreen(%logger{36}) - %highlight(%msg) %n</pattern>
+            <!--时间 线程 日志的输出格式-->
+        </encoder>
+    </appender>
+
+<!--打印的级别-->
+    <root level="debug">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
