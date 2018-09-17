@@ -31,5 +31,5 @@
         <property name="suffix" value=".jsp"/>
     </bean>
     <!--扫描web相关的bean-->
-    <context:component-scan base-package="cn.seckill2.web"/>
+    <context:component-scan base-package="cn.seckill.web"/>
 </beans>

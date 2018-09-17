@@ -10,7 +10,7 @@
        http://www.springframework.org/schema/tx
 	   http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
     <!--扫描service包下所有注解的类型-->
-    <context:component-scan base-package="cn.seckill2.service"/>
+    <context:component-scan base-package="cn.seckill.service"/>
     <!--配置事务管理器-->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <!--注入数据库连接池-->
