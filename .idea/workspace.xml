@@ -8,10 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fc3bbfbd-e880-495f-b124-e02c74985556" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/seckill/dao/cache/RedisDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/seckill/dao/cache/RedisDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/seckill/service/impl/SeckillServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/seckill/service/impl/SeckillServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cn/seckill/dao/cache/RedisDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/cn/seckill/dao/cache/RedisDaoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/spring-dao.xml" afterPath="$PROJECT_DIR$/target/classes/spring/spring-dao.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -103,8 +101,8 @@
       <file leaf-file-name="SeckillServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/seckill/service/impl/SeckillServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="77" column="9" lean-forward="true" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+            <state relative-caret-position="383">
+              <caret line="136" column="17" lean-forward="false" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
               <folding>
                 <element signature="e#1582#1583#0" expanded="true" />
                 <element signature="e#1636#1637#0" expanded="true" />
@@ -1652,7 +1650,7 @@
       <workItem from="1537087084571" duration="947000" />
       <workItem from="1537156442973" duration="13556000" />
       <workItem from="1537272043589" duration="633000" />
-      <workItem from="1537414367992" duration="22245000" />
+      <workItem from="1537414367992" duration="22695000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1537158003169</created>
@@ -1710,7 +1708,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537443534522</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="输出秒杀接口优化">
+      <created>1537454226066</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1537454226066</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1746,7 +1751,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="282414000" />
+    <option name="totallyTimeSpent" value="282864000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1809,7 +1814,8 @@
     <MESSAGE value="2" />
     <MESSAGE value="初步配置使用Redis" />
     <MESSAGE value="RedisDao测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="RedisDao测试" />
+    <MESSAGE value="输出秒杀接口优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="输出秒杀接口优化" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2198,8 +2204,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/seckill/service/impl/SeckillServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="77" column="9" lean-forward="true" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+        <state relative-caret-position="383">
+          <caret line="136" column="17" lean-forward="false" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
           <folding>
             <element signature="e#1582#1583#0" expanded="true" />
             <element signature="e#1636#1637#0" expanded="true" />
