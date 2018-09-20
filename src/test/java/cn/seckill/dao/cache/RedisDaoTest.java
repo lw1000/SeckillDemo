@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:spring/spring-dao.xml")
 public class RedisDaoTest {
-    private long id=1000;
+    private long id=1001;
 
     @Autowired
     private SeckillDao seckillDao;
@@ -29,7 +29,7 @@ public class RedisDaoTest {
                 String result= redisDao.putSeckill(seckill);
                 System.out.println("result:"+result);
                 seckill= redisDao.getSeckill(id);
-               System.out.print("seckill:"+seckill);
+               System.out.print("seckill:"+seckill.toString());
             }
         }
    }

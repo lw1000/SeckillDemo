@@ -6,12 +6,14 @@ import com.dyuproject.protostuff.ProtobufIOUtil;
 import com.dyuproject.protostuff.runtime.RuntimeSchema;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Repository;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
 /**
  * Created by Administrator on 2018/9/20 0020.
  */
+@Repository
 public class RedisDao {
      private final Logger logger= LoggerFactory.getLogger(this.getClass());
 
