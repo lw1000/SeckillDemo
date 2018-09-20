@@ -2,7 +2,7 @@ package cn.seckill.dao.cache;
 
 import cn.seckill.entity.Seckill;
 import com.dyuproject.protostuff.LinkedBuffer;
-import com.dyuproject.protostuff.ProtostuffIOUtil;
+import com.dyuproject.protostuff.ProtobufIOUtil;
 import com.dyuproject.protostuff.runtime.RuntimeSchema;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,62 +13,62 @@ import redis.clients.jedis.JedisPool;
  * Created by Administrator on 2018/9/20 0020.
  */
 public class RedisDao {
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
-    private JedisPool jedisPool;
-    private int port;
-    private String ip;
+     private final Logger logger= LoggerFactory.getLogger(this.getClass());
 
-    public RedisDao(String ip, int port) {
-        logger.info("---------------------------------ip:{},port:{}",ip,port);
-        this.port = port;
-        this.ip = ip;
+    private  JedisPool jedisPool;
+
+    private RuntimeSchema<Seckill> schema=RuntimeSchema.createFrom(Seckill.class);
+
+    public RedisDao(String ip,int prot) {
+       jedisPool=new JedisPool(ip,prot);
     }
 
-    //Serialize function
-    private RuntimeSchema<Seckill> schema = RuntimeSchema.createFrom(Seckill.class);
+    public RedisDao() {
+    }
 
-    public Seckill getSeckill(long seckillId) {
-        jedisPool = new JedisPool(ip, port);
-        //redis operate
+    public Seckill getSeckill(Long seckillId){
+        //Redis操作逻辑
         try {
-            Jedis jedis = jedisPool.getResource();
+            Jedis jedis=jedisPool.getResource();
             try {
-                String key = "seckill:" + seckillId;
-                //由于redis内部没有实现序列化方法,而且jdk自带的implaments Serializable比较慢,会影响并发,因此需要使用第三方序列化方法.
-                byte[] bytes = jedis.get(key.getBytes());
-                if(null != bytes){
-                    Seckill seckill = schema.newMessage();
-                    ProtostuffIOUtil.mergeFrom(bytes,seckill,schema);
-                    //reSerialize
+                String key="seckill:"+seckillId;
+                //get->byte[]->反序列化->Object （Seckillq）
+                //第三方序列化
+                byte[] bytes=jedis.get(key.getBytes());
+                if(bytes!=null){
+                    Seckill seckill=schema.newMessage();
+                    ProtobufIOUtil.mergeFrom(bytes,seckill,schema);
                     return seckill;
                 }
-            } finally {
-                jedisPool.close();
+            }finally {
+                jedis.close();
             }
-        } catch (Exception e) {
-            logger.error(e.getMessage(),e);
+        }catch (Exception e){
+
         }
 
         return null;
     }
 
-    public String putSeckill(Seckill seckill) {
-        jedisPool = new JedisPool(ip, port);
-        //set Object(seckill) ->Serialize -> byte[]
-        try{
-            Jedis jedis = jedisPool.getResource();
-            try{
-                String key = "seckill:"+seckill.getSeckillId();
-                byte[] bytes = ProtostuffIOUtil.toByteArray(seckill, schema, LinkedBuffer.allocate(LinkedBuffer.DEFAULT_BUFFER_SIZE));
-                //time out  cache
-                int timeout = 60*60;
-                String result = jedis.setex(key.getBytes(),timeout,bytes);
+    public String putSeckill(Seckill seckill){
+        //set Object->序列化->byte[]->发送给Redis
+        try {
+            Jedis jedis=jedisPool.getResource();
+            try {
+                String key="seckill:"+seckill.getSeckillId();
+                byte[] bytes=ProtobufIOUtil.toByteArray(seckill,schema, LinkedBuffer.allocate(LinkedBuffer.DEFAULT_BUFFER_SIZE));
+                //超时缓存
+                //Redis存的数据可以使永久也可以是限时的
+                //对于数据库缓存来说一般使用超时机制来保证数据缓存与数据库数据的完整性
+                int time=60*60;
+                //返回error或OK
+                String result=jedis.setex(key.getBytes(),time,bytes);
                 return result;
             }finally {
-                jedisPool.close();
+                jedis.close();
             }
         }catch (Exception e){
-            logger.error(e.getMessage(),e);
+
         }
         return null;
     }

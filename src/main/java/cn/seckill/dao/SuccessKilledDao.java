@@ -2,10 +2,12 @@ package cn.seckill.dao;
 
 import cn.seckill.entity.SuccessKilled;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created by Administrator on 2018/7/9 0009.
  */
+@Repository
 public interface SuccessKilledDao {
 
     /*

@@ -106,12 +106,13 @@
             <version>4.3.10.RELEASE</version>
         </dependency>
         <!-- redis -->
+        <!--Jedis-->
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
             <version>2.7.2</version>
         </dependency>
-
+        <!--序列化-->
         <dependency>
             <groupId>com.dyuproject.protostuff</groupId>
             <artifactId>protostuff-api</artifactId>

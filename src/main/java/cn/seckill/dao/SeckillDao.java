@@ -2,6 +2,7 @@ package cn.seckill.dao;
 
 import cn.seckill.entity.Seckill;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2018/7/8 0008.
  */
+@Repository
 public interface SeckillDao {
     /*
     * 减库存
