@@ -17,7 +17,7 @@
     -->
     <mvc:annotation-driven/>
 
-
+ 
     <!--2.静态资源默认servlet配置
         1.加入对静态资源的处理：js,gif,png
         2.允许用"/"做整体映射
