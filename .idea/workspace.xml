@@ -6,7 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc3bbfbd-e880-495f-b124-e02c74985556" name="Default" comment="修复Jackson与spring的版本不兼容问题3">
+    <list default="true" id="fc3bbfbd-e880-495f-b124-e02c74985556" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
@@ -95,7 +98,7 @@
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="447">
-              <caret line="83" column="24" lean-forward="false" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+              <caret line="83" column="29" lean-forward="false" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -1708,7 +1711,7 @@
       <workItem from="1542516073870" duration="1397000" />
       <workItem from="1544108062223" duration="711000" />
       <workItem from="1544194075262" duration="1396000" />
-      <workItem from="1544275771453" duration="2868000" />
+      <workItem from="1544275771453" duration="3286000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1537158003169</created>
@@ -1815,7 +1818,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544278694575</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="修复Jackson与spring的版本不兼容问题4">
+      <created>1544278831557</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1544278831557</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1851,7 +1861,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="304717000" />
+    <option name="totallyTimeSpent" value="305135000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1921,7 +1931,8 @@
     <MESSAGE value="修复Jackson与spring的版本不兼容问题" />
     <MESSAGE value="修复Jackson与spring的版本不兼容问题2" />
     <MESSAGE value="修复Jackson与spring的版本不兼容问题3" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复Jackson与spring的版本不兼容问题3" />
+    <MESSAGE value="修复Jackson与spring的版本不兼容问题4" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复Jackson与spring的版本不兼容问题4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2289,7 +2300,7 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
-          <caret line="83" column="24" lean-forward="false" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+          <caret line="83" column="29" lean-forward="false" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
           <folding />
         </state>
       </provider>
